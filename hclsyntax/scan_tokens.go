@@ -12,7 +12,7 @@ import (
 
 // This file is generated from scan_tokens.rl. DO NOT EDIT.
 
-//line scan_tokens.go:17
+//line scan_tokens.go:15
 var _hcltok_actions []byte = []byte{
 	0, 1, 0, 1, 1, 1, 3, 1, 4,
 	1, 7, 1, 8, 1, 9, 1, 10,
@@ -4279,7 +4279,7 @@ func scanTokens(data []byte, filename string, start hcl.Pos, mode scanMode) []To
 		f.emitToken(TokenType(b[0]), ts, te)
 	}
 
-//line scan_tokens.go:4292
+//line scan_tokens.go:4286
 	{
 		top = 0
 		ts = 0
@@ -4287,7 +4287,7 @@ func scanTokens(data []byte, filename string, start hcl.Pos, mode scanMode) []To
 		act = 0
 	}
 
-//line scan_tokens.go:4300
+//line scan_tokens.go:4293
 	{
 		var _klen int
 		var _trans int
@@ -4311,7 +4311,7 @@ func scanTokens(data []byte, filename string, start hcl.Pos, mode scanMode) []To
 //line NONE:1
 				ts = p
 
-//line scan_tokens.go:4323
+//line scan_tokens.go:4316
 			}
 		}
 
@@ -5201,7 +5201,7 @@ func scanTokens(data []byte, filename string, start hcl.Pos, mode scanMode) []To
 					}
 				}
 
-//line scan_tokens.go:5062
+//line scan_tokens.go:5055
 			}
 		}
 
@@ -5220,7 +5220,7 @@ func scanTokens(data []byte, filename string, start hcl.Pos, mode scanMode) []To
 //line NONE:1
 				act = 0
 
-//line scan_tokens.go:5080
+//line scan_tokens.go:5073
 			}
 		}
 
