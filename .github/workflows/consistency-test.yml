@@ -18,8 +18,7 @@ jobs:
     name: "Consistency Test on ${{ matrix.runs-on }}"
     strategy:
       matrix:
-        # Exclude other OS for now (where Ragel has non-deterministic output)
-        runs-on: [ubuntu-latest]
+        runs-on: [ubuntu-latest, macos-latest, windows-latest]
       fail-fast: false
     runs-on: "${{ matrix.runs-on }}"
 
@@ -39,6 +38,9 @@ jobs:
 
       - name: Install Ragel
         uses: ./.github/actions/setup-ragel
+        with:
+          build_from_source: true
+          ref: fix/colm-high-byte-keys
 
       - name: Re-generate code
         shell: bash
