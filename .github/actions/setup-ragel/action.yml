@@ -23,29 +23,68 @@ runs:
       with:
         repository: adrian-thurston/colm-suite
         ref: ${{ inputs.ref }}
+        path: ${{ runner.temp }}/ragel
 
-    - name: Build Ragel
+    - name: Prepare Build Environment (macOS)
       shell: bash
-      if: ${{ inputs.build_from_source }}
+      working-directory: ${{ runner.temp }}/ragel
+      if: ${{ runner.os == 'macOS' }}
+      run: brew install autoconf automake libtool
+
+    - name: Prepare Build Environment (Windows)
+      if: ${{ runner.os == 'Windows' && inputs.build_from_source }}
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: UCRT64
+        install: autoconf automake libtool pkg-config make gcc
+
+    - name: Build Ragel (Linux)
+      shell: bash
+      working-directory: ${{ runner.temp }}/ragel
+      if: ${{ runner.os == 'Linux' && inputs.build_from_source }}
+      run: |
+        ./autogen.sh
+        ./configure
+        make
+        sudo make install
+        sudo ldconfig
+
+    - name: Build Ragel (macOS)
+      shell: bash
+      working-directory: ${{ runner.temp }}/ragel
+      if: ${{ runner.os == 'macOS' && inputs.build_from_source }}
+      run: |
+        ./autogen.sh
+        ./configure
+        make
+        sudo make install
+
+    - name: Build Ragel (Windows)
+      shell: msys2 {0}
+      working-directory: ${{ runner.temp }}/ragel
+      if: ${{ runner.os == 'Windows' && inputs.build_from_source }}
       run: |
         ./autogen.sh
         ./configure
         make
         make install
-      
+
     - name: Install Ragel (Linux)
       shell: bash
+      working-directory: ${{ runner.temp }}/ragel
       if: ${{ runner.os == 'Linux' && !inputs.build_from_source }}
       run: sudo apt install ragel
 
     - name: Install Ragel (macOS)
       shell: bash
+      working-directory: ${{ runner.temp }}/ragel
       if: ${{ runner.os == 'macOS' && !inputs.build_from_source }}
       run: brew install ragel
 
     - name: Install Ragel (Windows)
       if: ${{ runner.os == 'Windows' && !inputs.build_from_source }}
       shell: pwsh
+      working-directory: ${{ runner.temp }}/ragel
       run: winget install -e --accept-source-agreements --id PolarGoose.Ragel
 
     - name: Ragel version
