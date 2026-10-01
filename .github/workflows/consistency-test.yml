@@ -18,8 +18,7 @@ jobs:
     name: "Consistency Test on ${{ matrix.runs-on }}"
     strategy:
       matrix:
-        # Exclude other OS for now (where Ragel has non-deterministic output)
-        runs-on: [ubuntu-latest]
+        runs-on: [ubuntu-latest, macos-latest, windows-latest]
       fail-fast: false
     runs-on: "${{ matrix.runs-on }}"
 
@@ -36,9 +35,12 @@ jobs:
         uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1.321.0
         with:
           working-directory: ./hclsyntax
+          windows-toolchain: none
 
       - name: Install Ragel
         uses: ./.github/actions/setup-ragel
+        with:
+          ref: main
 
       - name: Re-generate code
         shell: bash
@@ -48,6 +50,9 @@ jobs:
       - name: Check for changes
         shell: bash
         run: |
+          # track untracked files as intent-to-add
+          git add -N .
+
           CHANGED="$(git status --porcelain)"
           if [[ -n "$CHANGED" ]]; then
             git diff
