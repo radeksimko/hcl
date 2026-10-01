@@ -40,6 +40,8 @@ jobs:
 
       - name: Install Ragel
         uses: ./.github/actions/setup-ragel
+        with:
+          ref: ragel-6.10
 
       - name: Re-generate code
         shell: bash
@@ -49,6 +51,9 @@ jobs:
       - name: Check for changes
         shell: bash
         run: |
+          # track untracked files as intent-to-add
+          git add -N .
+
           CHANGED="$(git status --porcelain)"
           if [[ -n "$CHANGED" ]]; then
             git diff
