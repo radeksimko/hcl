@@ -1,127 +1,22 @@
-//line scan_string_lit.rl:1
 // Copyright IBM Corp. 2014, 2026
 // SPDX-License-Identifier: MPL-2.0
 
 package hclsyntax
 
 // This file is generated from scan_string_lit.rl. DO NOT EDIT.
-
-//line scan_string_lit.go:9
-var _hclstrtok_actions []byte = []byte{
-	0, 1, 0, 1, 1, 2, 1, 0,
-}
-
-var _hclstrtok_key_offsets []byte = []byte{
-	0, 0, 2, 4, 6, 10, 14, 18,
-	22, 27, 31, 36, 41, 46, 51, 57,
-	62, 74, 85, 96, 107, 118, 129, 140,
-	151,
-}
-
-var _hclstrtok_trans_keys []byte = []byte{
-	128, 191, 128, 191, 128, 191, 10, 13,
-	36, 37, 10, 13, 36, 37, 10, 13,
-	36, 37, 10, 13, 36, 37, 10, 13,
-	36, 37, 123, 10, 13, 36, 37, 10,
-	13, 36, 37, 92, 10, 13, 36, 37,
-	92, 10, 13, 36, 37, 92, 10, 13,
-	36, 37, 92, 10, 13, 36, 37, 92,
-	123, 10, 13, 36, 37, 92, 85, 117,
-	128, 191, 192, 223, 224, 239, 240, 247,
-	248, 255, 10, 13, 36, 37, 92, 48,
-	57, 65, 70, 97, 102, 10, 13, 36,
-	37, 92, 48, 57, 65, 70, 97, 102,
-	10, 13, 36, 37, 92, 48, 57, 65,
-	70, 97, 102, 10, 13, 36, 37, 92,
-	48, 57, 65, 70, 97, 102, 10, 13,
-	36, 37, 92, 48, 57, 65, 70, 97,
-	102, 10, 13, 36, 37, 92, 48, 57,
-	65, 70, 97, 102, 10, 13, 36, 37,
-	92, 48, 57, 65, 70, 97, 102, 10,
-	13, 36, 37, 92, 48, 57, 65, 70,
-	97, 102,
-}
-
-var _hclstrtok_single_lengths []byte = []byte{
-	0, 0, 0, 0, 4, 4, 4, 4,
-	5, 4, 5, 5, 5, 5, 6, 5,
-	2, 5, 5, 5, 5, 5, 5, 5,
-	5,
-}
-
-var _hclstrtok_range_lengths []byte = []byte{
-	0, 1, 1, 1, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0,
-	5, 3, 3, 3, 3, 3, 3, 3,
-	3,
-}
-
-var _hclstrtok_index_offsets []byte = []byte{
-	0, 0, 2, 4, 6, 11, 16, 21,
-	26, 32, 37, 43, 49, 55, 61, 68,
-	74, 82, 91, 100, 109, 118, 127, 136,
-	145,
-}
-
-var _hclstrtok_indicies []byte = []byte{
-	0, 1, 2, 1, 3, 1, 5, 6,
-	7, 8, 4, 10, 11, 12, 13, 9,
-	14, 11, 12, 13, 9, 10, 11, 15,
-	13, 9, 10, 11, 12, 13, 14, 9,
-	10, 11, 12, 15, 9, 17, 18, 19,
-	20, 21, 16, 23, 24, 25, 26, 27,
-	22, 0, 24, 25, 26, 27, 22, 23,
-	24, 28, 26, 27, 22, 23, 24, 25,
-	26, 27, 0, 22, 23, 24, 25, 28,
-	27, 22, 29, 30, 22, 2, 3, 31,
-	22, 0, 23, 24, 25, 26, 27, 32,
-	32, 32, 22, 23, 24, 25, 26, 27,
-	33, 33, 33, 22, 23, 24, 25, 26,
-	27, 34, 34, 34, 22, 23, 24, 25,
-	26, 27, 30, 30, 30, 22, 23, 24,
-	25, 26, 27, 35, 35, 35, 22, 23,
-	24, 25, 26, 27, 36, 36, 36, 22,
-	23, 24, 25, 26, 27, 37, 37, 37,
-	22, 23, 24, 25, 26, 27, 0, 0,
-	0, 22,
-}
-
-var _hclstrtok_trans_targs []byte = []byte{
-	11, 0, 1, 2, 4, 5, 6, 7,
-	9, 4, 5, 6, 7, 9, 5, 8,
-	10, 11, 12, 13, 15, 16, 10, 11,
-	12, 13, 15, 16, 14, 17, 21, 3,
-	18, 19, 20, 22, 23, 24,
-}
-
-var _hclstrtok_trans_actions []byte = []byte{
-	0, 0, 0, 0, 0, 1, 1, 1,
-	1, 3, 5, 5, 5, 5, 0, 0,
-	0, 1, 1, 1, 1, 1, 3, 5,
-	5, 5, 5, 5, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0,
-}
-
-var _hclstrtok_eof_actions []byte = []byte{
-	0, 0, 0, 0, 0, 3, 3, 3,
-	3, 3, 0, 3, 3, 3, 3, 3,
-	3, 3, 3, 3, 3, 3, 3, 3,
-	3,
-}
-
-const hclstrtok_start int = 4
-const hclstrtok_first_final int = 4
-const hclstrtok_error int = 0
-
-const hclstrtok_en_quoted int = 10
-const hclstrtok_en_unquoted int = 4
-
-//line scan_string_lit.rl:12
+var hclstrtok_start int = 4
+var _ = hclstrtok_start
+var hclstrtok_first_final int = 4
+var _ = hclstrtok_first_final
+var hclstrtok_error int = 0
+var _ = hclstrtok_error
+var hclstrtok_en_quoted int = 10
+var _ = hclstrtok_en_quoted
+var hclstrtok_en_unquoted int = 4
+var _ = hclstrtok_en_unquoted
 
 func scanStringLit(data []byte, quoted bool) [][]byte {
 	var ret [][]byte
-
-//line scan_string_lit.rl:63
 
 	// Ragel state
 	p := 0          // "Pointer" into data
@@ -143,148 +38,1613 @@ func scanStringLit(data []byte, quoted bool) [][]byte {
 	_ = eof
 
 	/*token := func () {
-	    ret = append(ret, data[ts:te])
+	ret = append(ret, data[ts:te])
 	}*/
 
-//line scan_string_lit.go:151
 	{
+
 	}
-
-//line scan_string_lit.go:154
 	{
-		var _klen int
-		var _trans int
-		var _acts int
-		var _nacts uint
-		var _keys int
-		if p == pe {
-			goto _test_eof
+		switch cs {
+		case 4:
+			goto st_case_4
+		case 5:
+			goto st_case_5
+		case 6:
+			goto st_case_6
+		case 7:
+			goto st_case_7
+		case 8:
+			goto st_case_8
+		case 9:
+			goto st_case_9
+		case 10:
+			goto st_case_10
+		case 11:
+			goto st_case_11
+		case 12:
+			goto st_case_12
+		case 13:
+			goto st_case_13
+		case 14:
+			goto st_case_14
+		case 15:
+			goto st_case_15
+		case 16:
+			goto st_case_16
+		case 17:
+			goto st_case_17
+		case 18:
+			goto st_case_18
+		case 19:
+			goto st_case_19
+		case 20:
+			goto st_case_20
+		case 21:
+			goto st_case_21
+		case 22:
+			goto st_case_22
+		case 23:
+			goto st_case_23
+		case 24:
+			goto st_case_24
+		case 1:
+			goto st_case_1
+		case 0:
+			goto st_case_0
+		case 2:
+			goto st_case_2
+		case 3:
+			goto st_case_3
+
 		}
-		if cs == 0 {
-			goto _out
-		}
-	_resume:
-		_keys = int(_hclstrtok_key_offsets[cs])
-		_trans = int(_hclstrtok_index_offsets[cs])
-
-		_klen = int(_hclstrtok_single_lengths[cs])
-		if _klen > 0 {
-			_lower := int(_keys)
-			var _mid int
-			_upper := int(_keys + _klen - 1)
-			for {
-				if _upper < _lower {
-					break
-				}
-
-				_mid = _lower + ((_upper - _lower) >> 1)
-				switch {
-				case data[p] < _hclstrtok_trans_keys[_mid]:
-					_upper = _mid - 1
-				case data[p] > _hclstrtok_trans_keys[_mid]:
-					_lower = _mid + 1
-				default:
-					_trans += int(_mid - int(_keys))
-					goto _match
-				}
-			}
-			_keys += _klen
-			_trans += _klen
-		}
-
-		_klen = int(_hclstrtok_range_lengths[cs])
-		if _klen > 0 {
-			_lower := int(_keys)
-			var _mid int
-			_upper := int(_keys + (_klen << 1) - 2)
-			for {
-				if _upper < _lower {
-					break
-				}
-
-				_mid = _lower + (((_upper - _lower) >> 1) & ^1)
-				switch {
-				case data[p] < _hclstrtok_trans_keys[_mid]:
-					_upper = _mid - 2
-				case data[p] > _hclstrtok_trans_keys[_mid+1]:
-					_lower = _mid + 2
-				default:
-					_trans += int((_mid - int(_keys)) >> 1)
-					goto _match
-				}
-			}
-			_trans += _klen
-		}
-
-	_match:
-		_trans = int(_hclstrtok_indicies[_trans])
-		cs = int(_hclstrtok_trans_targs[_trans])
-
-		if _hclstrtok_trans_actions[_trans] == 0 {
-			goto _again
-		}
-
-		_acts = int(_hclstrtok_trans_actions[_trans])
-		_nacts = uint(_hclstrtok_actions[_acts])
-		_acts++
-		for ; _nacts > 0; _nacts-- {
-			_acts++
-			switch _hclstrtok_actions[_acts-1] {
-			case 0:
-//line scan_string_lit.rl:42
-
-				// If te is behind p then we've skipped over some literal
-				// characters which we must now return.
-				if te < p {
-					ret = append(ret, data[te:p])
-				}
-				ts = p
-
-			case 1:
-//line scan_string_lit.rl:50
-
-				te = p
-				ret = append(ret, data[ts:te])
-
-//line scan_string_lit.go:249
-			}
-		}
-
-	_again:
-		if cs == 0 {
-			goto _out
-		}
-		p++
-		if p != pe {
-			goto _resume
-		}
-	_test_eof:
+	_ctr11:
 		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st4
+	_st4:
+		if p == eof {
+			goto _out4
+
+		}
+		p += 1
+	st_case_4:
+		if p == pe && p != eof {
+			goto _out4
+
 		}
 		if p == eof {
-			__acts := _hclstrtok_eof_actions[cs]
-			__nacts := uint(_hclstrtok_actions[__acts])
-			__acts++
-			for ; __nacts > 0; __nacts-- {
-				__acts++
-				switch _hclstrtok_actions[__acts-1] {
-				case 1:
-//line scan_string_lit.rl:50
+			goto _st4
 
-					te = p
-					ret = append(ret, data[ts:te])
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr6
 
-//line scan_string_lit.go:274
 				}
-			}
-		}
+			case 13:
+				{
+					goto _ctr7
 
+				}
+			case 36:
+				{
+					goto _ctr8
+
+				}
+			case 37:
+				{
+					goto _ctr9
+
+				}
+
+			}
+			goto _st4
+
+		}
+	_ctr6:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st5
+	_ctr10:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st5
+	_ctr12:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st5
+	_st5:
+		if p == eof {
+			goto _out5
+
+		}
+		p += 1
+	st_case_5:
+		if p == pe && p != eof {
+			goto _out5
+
+		}
+		if p == eof {
+			goto _ctr10
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr12
+
+				}
+			case 13:
+				{
+					goto _ctr13
+
+				}
+			case 36:
+				{
+					goto _ctr14
+
+				}
+			case 37:
+				{
+					goto _ctr15
+
+				}
+
+			}
+			goto _ctr11
+
+		}
+	_ctr7:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st6
+	_ctr16:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st6
+	_ctr13:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st6
+	_st6:
+		if p == eof {
+			goto _out6
+
+		}
+		p += 1
+	st_case_6:
+		if p == pe && p != eof {
+			goto _out6
+
+		}
+		if p == eof {
+			goto _ctr16
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _st5
+
+				}
+			case 13:
+				{
+					goto _ctr13
+
+				}
+			case 36:
+				{
+					goto _ctr14
+
+				}
+			case 37:
+				{
+					goto _ctr15
+
+				}
+
+			}
+			goto _ctr11
+
+		}
+	_ctr8:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st7
+	_ctr18:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st7
+	_ctr14:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st7
+	_st7:
+		if p == eof {
+			goto _out7
+
+		}
+		p += 1
+	st_case_7:
+		if p == pe && p != eof {
+			goto _out7
+
+		}
+		if p == eof {
+			goto _ctr18
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr12
+
+				}
+			case 13:
+				{
+					goto _ctr13
+
+				}
+			case 36:
+				{
+					goto _st8
+
+				}
+			case 37:
+				{
+					goto _ctr15
+
+				}
+
+			}
+			goto _ctr11
+
+		}
+	_ctr20:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st8
+	_st8:
+		if p == eof {
+			goto _out8
+
+		}
+		p += 1
+	st_case_8:
+		if p == pe && p != eof {
+			goto _out8
+
+		}
+		if p == eof {
+			goto _ctr20
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr12
+
+				}
+			case 13:
+				{
+					goto _ctr13
+
+				}
+			case 36:
+				{
+					goto _ctr14
+
+				}
+			case 37:
+				{
+					goto _ctr15
+
+				}
+			case 123:
+				{
+					goto _st5
+
+				}
+
+			}
+			goto _ctr11
+
+		}
+	_ctr9:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st9
+	_ctr21:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st9
+	_ctr15:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st9
+	_st9:
+		if p == eof {
+			goto _out9
+
+		}
+		p += 1
+	st_case_9:
+		if p == pe && p != eof {
+			goto _out9
+
+		}
+		if p == eof {
+			goto _ctr21
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr12
+
+				}
+			case 13:
+				{
+					goto _ctr13
+
+				}
+			case 36:
+				{
+					goto _ctr14
+
+				}
+			case 37:
+				{
+					goto _st8
+
+				}
+
+			}
+			goto _ctr11
+
+		}
+	_ctr29:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st10
+	_st10:
+		if p == eof {
+			goto _out10
+
+		}
+		p += 1
+	st_case_10:
+		if p == pe && p != eof {
+			goto _out10
+
+		}
+		if p == eof {
+			goto _st10
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr23
+
+				}
+			case 13:
+				{
+					goto _ctr24
+
+				}
+			case 36:
+				{
+					goto _ctr25
+
+				}
+			case 37:
+				{
+					goto _ctr26
+
+				}
+			case 92:
+				{
+					goto _ctr27
+
+				}
+
+			}
+			goto _st10
+
+		}
+	_ctr23:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st11
+	_ctr28:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st11
+	_ctr30:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st11
+	_st11:
+		if p == eof {
+			goto _out11
+
+		}
+		p += 1
+	st_case_11:
+		if p == pe && p != eof {
+			goto _out11
+
+		}
+		if p == eof {
+			goto _ctr28
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			goto _ctr29
+
+		}
+	_ctr24:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st12
+	_ctr35:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st12
+	_ctr31:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st12
+	_st12:
+		if p == eof {
+			goto _out12
+
+		}
+		p += 1
+	st_case_12:
+		if p == pe && p != eof {
+			goto _out12
+
+		}
+		if p == eof {
+			goto _ctr35
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _st11
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			goto _ctr29
+
+		}
+	_ctr25:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st13
+	_ctr36:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st13
+	_ctr32:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st13
+	_st13:
+		if p == eof {
+			goto _out13
+
+		}
+		p += 1
+	st_case_13:
+		if p == pe && p != eof {
+			goto _out13
+
+		}
+		if p == eof {
+			goto _ctr36
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _st14
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			goto _ctr29
+
+		}
+	_ctr38:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st14
+	_st14:
+		if p == eof {
+			goto _out14
+
+		}
+		p += 1
+	st_case_14:
+		if p == pe && p != eof {
+			goto _out14
+
+		}
+		if p == eof {
+			goto _ctr38
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+			case 123:
+				{
+					goto _st11
+
+				}
+
+			}
+			goto _ctr29
+
+		}
+	_ctr26:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st15
+	_ctr39:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st15
+	_ctr33:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st15
+	_st15:
+		if p == eof {
+			goto _out15
+
+		}
+		p += 1
+	st_case_15:
+		if p == pe && p != eof {
+			goto _out15
+
+		}
+		if p == eof {
+			goto _ctr39
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _st14
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			goto _ctr29
+
+		}
+	_ctr27:
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st16
+	_ctr40:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st16
+	_ctr34:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		{
+			if te < p {
+				ret = append(ret, data[te:p])
+			}
+			ts = p
+		}
+		goto _st16
+	_st16:
+		if p == eof {
+			goto _out16
+
+		}
+		p += 1
+	st_case_16:
+		if p == pe && p != eof {
+			goto _out16
+
+		}
+		if p == eof {
+			goto _ctr40
+
+		} else {
+			switch data[p] {
+			case 85:
+				{
+					goto _st17
+
+				}
+			case 117:
+				{
+					goto _st21
+
+				}
+
+			}
+			if (data[p]) < 224 {
+				if (data[p]) > 191 {
+					{
+						goto _st1
+
+					}
+
+				} else if (data[p]) >= 128 {
+					goto _ctr29
+
+				}
+
+			} else if (data[p]) > 239 {
+				if (data[p]) > 247 {
+					{
+						goto _ctr29
+
+					}
+
+				} else {
+					goto _st3
+
+				}
+
+			} else {
+				goto _st2
+
+			}
+			goto _st11
+
+		}
+	_ctr43:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st17
+	_st17:
+		if p == eof {
+			goto _out17
+
+		}
+		p += 1
+	st_case_17:
+		if p == pe && p != eof {
+			goto _out17
+
+		}
+		if p == eof {
+			goto _ctr43
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st18
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st18
+
+				}
+
+			} else {
+				goto _st18
+
+			}
+			goto _ctr29
+
+		}
+	_ctr45:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st18
+	_st18:
+		if p == eof {
+			goto _out18
+
+		}
+		p += 1
+	st_case_18:
+		if p == pe && p != eof {
+			goto _out18
+
+		}
+		if p == eof {
+			goto _ctr45
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st19
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st19
+
+				}
+
+			} else {
+				goto _st19
+
+			}
+			goto _ctr29
+
+		}
+	_ctr47:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st19
+	_st19:
+		if p == eof {
+			goto _out19
+
+		}
+		p += 1
+	st_case_19:
+		if p == pe && p != eof {
+			goto _out19
+
+		}
+		if p == eof {
+			goto _ctr47
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st20
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st20
+
+				}
+
+			} else {
+				goto _st20
+
+			}
+			goto _ctr29
+
+		}
+	_ctr49:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st20
+	_st20:
+		if p == eof {
+			goto _out20
+
+		}
+		p += 1
+	st_case_20:
+		if p == pe && p != eof {
+			goto _out20
+
+		}
+		if p == eof {
+			goto _ctr49
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st21
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st21
+
+				}
+
+			} else {
+				goto _st21
+
+			}
+			goto _ctr29
+
+		}
+	_ctr50:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st21
+	_st21:
+		if p == eof {
+			goto _out21
+
+		}
+		p += 1
+	st_case_21:
+		if p == pe && p != eof {
+			goto _out21
+
+		}
+		if p == eof {
+			goto _ctr50
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st22
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st22
+
+				}
+
+			} else {
+				goto _st22
+
+			}
+			goto _ctr29
+
+		}
+	_ctr52:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st22
+	_st22:
+		if p == eof {
+			goto _out22
+
+		}
+		p += 1
+	st_case_22:
+		if p == pe && p != eof {
+			goto _out22
+
+		}
+		if p == eof {
+			goto _ctr52
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st23
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st23
+
+				}
+
+			} else {
+				goto _st23
+
+			}
+			goto _ctr29
+
+		}
+	_ctr54:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st23
+	_st23:
+		if p == eof {
+			goto _out23
+
+		}
+		p += 1
+	st_case_23:
+		if p == pe && p != eof {
+			goto _out23
+
+		}
+		if p == eof {
+			goto _ctr54
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st24
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st24
+
+				}
+
+			} else {
+				goto _st24
+
+			}
+			goto _ctr29
+
+		}
+	_ctr56:
+		{
+			te = p
+			ret = append(ret, data[ts:te])
+		}
+		goto _st24
+	_st24:
+		if p == eof {
+			goto _out24
+
+		}
+		p += 1
+	st_case_24:
+		if p == pe && p != eof {
+			goto _out24
+
+		}
+		if p == eof {
+			goto _ctr56
+
+		} else {
+			switch data[p] {
+			case 10:
+				{
+					goto _ctr30
+
+				}
+			case 13:
+				{
+					goto _ctr31
+
+				}
+			case 36:
+				{
+					goto _ctr32
+
+				}
+			case 37:
+				{
+					goto _ctr33
+
+				}
+			case 92:
+				{
+					goto _ctr34
+
+				}
+
+			}
+			if (data[p]) < 65 {
+				if 48 <= (data[p]) && (data[p]) <= 57 {
+					goto _st11
+
+				}
+
+			} else if (data[p]) > 70 {
+				if 97 <= (data[p]) && (data[p]) <= 102 {
+					goto _st11
+
+				}
+
+			} else {
+				goto _st11
+
+			}
+			goto _ctr29
+
+		}
+	_st1:
+		if p == eof {
+			goto _out1
+
+		}
+		p += 1
+	st_case_1:
+		if p == pe && p != eof {
+			goto _out1
+
+		}
+		if p == eof {
+			goto _st1
+
+		} else {
+			if 128 <= (data[p]) && (data[p]) <= 191 {
+				goto _st11
+
+			}
+			goto _st0
+
+		}
+	_st0:
+		if p == eof {
+			goto _out0
+
+		}
+	st_case_0:
+		goto _out0
+	_st2:
+		if p == eof {
+			goto _out2
+
+		}
+		p += 1
+	st_case_2:
+		if p == pe && p != eof {
+			goto _out2
+
+		}
+		if p == eof {
+			goto _st2
+
+		} else {
+			if 128 <= (data[p]) && (data[p]) <= 191 {
+				goto _st1
+
+			}
+			goto _st0
+
+		}
+	_st3:
+		if p == eof {
+			goto _out3
+
+		}
+		p += 1
+	st_case_3:
+		if p == pe && p != eof {
+			goto _out3
+
+		}
+		if p == eof {
+			goto _st3
+
+		} else {
+			if 128 <= (data[p]) && (data[p]) <= 191 {
+				goto _st2
+
+			}
+			goto _st0
+
+		}
+	_out4:
+		cs = 4
+		goto _out
+	_out5:
+		cs = 5
+		goto _out
+	_out6:
+		cs = 6
+		goto _out
+	_out7:
+		cs = 7
+		goto _out
+	_out8:
+		cs = 8
+		goto _out
+	_out9:
+		cs = 9
+		goto _out
+	_out10:
+		cs = 10
+		goto _out
+	_out11:
+		cs = 11
+		goto _out
+	_out12:
+		cs = 12
+		goto _out
+	_out13:
+		cs = 13
+		goto _out
+	_out14:
+		cs = 14
+		goto _out
+	_out15:
+		cs = 15
+		goto _out
+	_out16:
+		cs = 16
+		goto _out
+	_out17:
+		cs = 17
+		goto _out
+	_out18:
+		cs = 18
+		goto _out
+	_out19:
+		cs = 19
+		goto _out
+	_out20:
+		cs = 20
+		goto _out
+	_out21:
+		cs = 21
+		goto _out
+	_out22:
+		cs = 22
+		goto _out
+	_out23:
+		cs = 23
+		goto _out
+	_out24:
+		cs = 24
+		goto _out
+	_out1:
+		cs = 1
+		goto _out
+	_out0:
+		cs = 0
+		goto _out
+	_out2:
+		cs = 2
+		goto _out
+	_out3:
+		cs = 3
+		goto _out
 	_out:
 		{
-		}
-	}
 
-//line scan_string_lit.rl:91
+		}
+
+	}
 
 	if te < p {
 		// Collect any leftover literal characters at the end of the input
